@@ -4,10 +4,10 @@ PHP caching proxy between tile server and your map application. To save bandwith
 ## usage
 Change variables in index.php.
 
-# apache
+### apache
 Set RewriteBase in .htaccess.
 
-# nginx
+### nginx
 Use in your nginx site definition. Do _not_ use any redirects or other fancy configuration.
 ```
 location / {
@@ -15,7 +15,7 @@ location / {
     }
 ```
 
-# go
+### go
 Use `https://yourdomain.com/appfolder/{zoom}/{x}/{y}.png` as tile url and it serves a cached tile from e.g. `http://c.tile.openstreetmap.org/{zoom}/{x}/{y}.png`
 
 Add other tile server by extending the $maptypes array.

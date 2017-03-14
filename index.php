@@ -23,7 +23,9 @@ if(substr($requestURI, 0, 1) == "/") {
   $requestURI = substr($requestURI, 1);
 }
 
-$requestURI = str_replace($baseDir."/", "", $requestURI);
+if($baseDir != "") { 
+  $requestURI = str_replace($baseDir."/", "", $requestURI); 
+}
 list($maptype, $zoom, $x, $y) = explode("/", $requestURI);
 
 if($maptype == "" || $zoom == "" || $x == "" || $y == "") {
